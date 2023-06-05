@@ -26,3 +26,12 @@ test('GET -> O primeiro colaborador retornado é chamado "Manoel Felipe Costa"?'
 
     expect(response.data.colaboradores[0]).toHaveProperty('nome', "Manoel Felipe Costa");
 })
+
+test('GET -> Caso um endpoint não declarado seja acessado, retorna erro 404', async () => {
+    try {
+      const response = await axios.get('http://localhost:7000/batata');
+      expect(response.status).toBe(404);
+    } catch (error) {
+      expect(error.response.status).toBe(404);
+    }
+  });

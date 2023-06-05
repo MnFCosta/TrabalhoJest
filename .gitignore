@@ -1,0 +1,4 @@
+venv
+*.pytest_cache
+staticroot/admin
+Test/node_modules
