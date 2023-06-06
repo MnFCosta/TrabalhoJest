@@ -3,6 +3,8 @@ from fastapi import FastAPI
 import mysql.connector
 import uvicorn
 
+#uvicorn api:app --port 7000 --reload comando para iniciar o servidor
+
 #Cria um instância da classe FastAPI, usada para definir endpoints
 # essa variável também é chamada pelo uvicorn para iniciar o servidor
 app = FastAPI()
